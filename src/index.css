@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mystic-void: #050508;
+  --color-mystic-dark: #0a0a10;
+  --color-mystic-darker: #07070c;
+  --color-mystic-card: rgba(15, 14, 25, 0.75);
+  --color-mystic-cardHover: rgba(25, 22, 40, 0.85);
+  --color-mystic-orange: #ff6b1a;
+  --color-mystic-orangeGlow: #ff8c38;
+  --color-mystic-gold: #d4af37;
+  --color-mystic-goldBright: #fce277;
+  --color-mystic-amber: #ff9f1c;
+  --color-mystic-cyan: #00e5ff;
+  --color-mystic-emerald: #10b981;
+  --color-mystic-purple: #8b5cf6;
+  --color-mystic-indigo: #4f46e5;
+
+  --font-cinzel: "Cinzel", serif;
+  --font-marcellus: "Marcellus", serif;
+  --font-grotesk: "Space Grotesk", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #050508;
+    color: #e5e7eb;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+  ::selection {
+    background-color: #ff6b1a;
+    color: #ffffff;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050508;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff6b1a44;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 107, 26, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6b1a88;
+}
+
+/* Glassmorphism & Mystic Portal Glows */
+.glass-mystic {
+  background: rgba(15, 14, 25, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-mystic-hover:hover {
+  background: rgba(25, 22, 40, 0.85);
+}
+
+.text-glow-orange {
+  text-shadow: 0 0 15px rgba(255, 107, 26, 0.6), 0 0 30px rgba(255, 107, 26, 0.3);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 15px rgba(0, 229, 255, 0.6), 0 0 30px rgba(0, 229, 255, 0.3);
+}
+
+.box-glow-orange {
+  box-shadow: 0 0 30px rgba(255, 107, 26, 0.4), inset 0 0 20px rgba(255, 107, 26, 0.2);
+}
+
+.box-glow-emerald {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.4), inset 0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+@keyframes spinCW {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinCCW {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-spin-cw-slow {
+  animation: spinCW 35s linear infinite;
+}
+
+.animate-spin-ccw-slow {
+  animation: spinCCW 25s linear infinite;
+}
+
+.animate-spin-cw-fast {
+  animation: spinCW 12s linear infinite;
+}
