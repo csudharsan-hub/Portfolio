@@ -355,7 +355,7 @@ export const projectsData = [
 export const educationData = [
   {
     "institution": "V.S.B Engineering College",
-    "degree": "B.Tech in Computer Science and Engineering",
+    "degree": "B.Tech in Information Technology",
     "period": "2023 – Expected May 2027",
     "score": "CGPA: 7.7 / 10.00",
     "status": "Current Quest",
